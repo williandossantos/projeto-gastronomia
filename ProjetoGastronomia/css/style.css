@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@100;300;500&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Montserrat', Sans-Serif;
+  
+}
+
+:root{
+  --bg-vermelho-claro:rgb(255,239,234);
+  --texto-primario-vermelho:#ff5656;
+  --texto-cor-preto:#203020;
+}
+html,body{
+  overflow-x: hidden;
+}
+.container{
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+}
+button{
+  cursor: pointer;
+  background: #fff;
+}
+#e-btn{
+  width: 40px;
+  height: 40px;
+  background-image: url("../icon/menu.png");
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+  background-position: center;
+  display: none;
+}
+
+/*****Cabecalho*****/
+#cabecalho > div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#cabecalho > div .logo{
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+}
+#cabecalho > div .logo a{
+  color: var(--texto-primario-vermelho);
+}
+#cabecalho > div .logo img{
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+}
+#cabecalho > div > nav{
+  display: flex;
+  gap: 15px;
+}
+#cabecalho > div > nav > .ativo{
+  color: var(--texto-primario-vermelho);
+}
+#cabecalho > div > nav a{
+  color: var(--texto-cor-preto);
+  display: block;
+}
+#cabecalho .form-wrap::before{
+  content:"2";
+  position: absolute;
+  background-color: var(--texto-primario-vermelho);
+  width: 30px;
+  height: 30px;
+  top:-20px;
+  right: -15px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(240, 0, 0, .2) 0px 10px 10px -5px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+}
+#cabecalho .form-wrap{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+#cabecalho .form-wrap .pesquisa{
+  background-image: url('../icon/lupa.png');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+  object-fit: cover;
+  padding: 1rem 0 1rem 2rem;
+}
+#cabecalho .form-wrap .btn{
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  background-image: url('../icon/sacola.png');
+  background-position:5px center;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+}
+/*****Chamada*****/
+#cabecalho .chamada{
+  padding: 4rem 0;
+}
+#cabecalho .chamada .chamada-wrap{ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+#cabecalho .chamada .chamada-texto{
+  width: 50%;
+  padding-right: 2rem;
+}
+#cabecalho .chamada .chamada-texto h1::before{
+  content: "mais do que rapido";
+  position: absolute;
+  top: -3rem;
+  padding: .4rem 2rem .4rem 0;
+  background-color: var(--bg-vermelho-claro);
+  background-image: url('../img/morango.png');
+  background-repeat: no-repeat;
+  background-size: 10%;
+  background-position: right;
+  border-radius: .5rem;
+  color: var(--texto-primario-vermelho);
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: right;
+}
+#cabecalho .chamada .chamada-texto h1{
+  position: relative;
+  font-size: 3rem;
+}
+#cabecalho .chamada .chamada-texto span{
+  color: var(--texto-primario-vermelho);
+}
+#cabecalho .chamada .chamada-texto p{
+  font-size: .850rem;
+  padding: 1rem 0 2rem 0;
+  color: rgba(0,0,0,.5);
+}
+
+#cabecalho .chamada .chamada-texto .chamada-btn > .btn1{
+  background-color: var(--texto-primario-vermelho);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+}
+#cabecalho .chamada .chamada-texto .chamada-btn > .btn2{
+  margin-left: 1rem;
+  background-color: transparent;
+}
+#cabecalho .chamada .chamada-texto .chamada-btn > .btn2 span{
+  width: 50px;
+  height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, .1) 0px 10px 10px -5px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: .3rem;
+  vertical-align: middle;
+}
+#cabecalho .chamada .chamada-texto .chamada-btn > .btn2 span img{
+  width: 20px;
+  height: 20px;
+  margin-top: .9rem;
+  margin-left: .2rem;
+}
+/*****BG-HOME*****/
+#cabecalho .bg-home{
+  width: 400px;
+  position: relative;
+  
+}
+#cabecalho .bg-info{
+  position: absolute;
+  top: 50px;
+  right:  0;
+  width: 120px;
+  padding: 1rem 0 2rem 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, .1) 0px 10px 10px -5px;
+  text-align: center;
+  
+}
+#cabecalho .bg-info img{
+  width: 40px;
+}
+#cabecalho .bg-info p.valor{
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding:.3rem 0;
+}
+#cabecalho .bg-info p.gratis{
+  color: rgba(0,0,0,.5);
+  font-size: .4rem;
+}
+#cabecalho .bg-info div{
+  width: 20px;
+  height: 20px;
+  border-radius: .4rem;
+  background-color: var(--texto-primario-vermelho);
+  padding: .6rem;
+  position: absolute;
+  left: 2.7rem;
+  bottom:-1.3rem ;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(240, 0, 0, .5) 0px 10px 10px -5px;
+}
+#cabecalho .bg-info div img{
+  width: 25px;
+  margin-top: -.1rem;
+  margin-left: -0.2rem;
+}
+#cabecalho .bg-wrap .bg {
+  width: 350px;
+  margin-right: auto;
+}
+#cabecalho .bg-wrap .bg::before{
+  content:"";
+  position:absolute;
+  width: 300px;
+  height: 130px;
+  border-radius: .6rem;
+  background:#ffc642;
+  bottom: .3rem;
+  z-index: -9;
+}
+#cabecalho .bg-wrap .bg img{
+  max-width:100%;
+  height: 350px;
+  margin-left: -2rem;
+  object-fit: cover;
+}
+
+/*****Deliveri*****/
+#deliveri{
+  background-color: var(--bg-vermelho-claro);
+  padding: 4rem 0;
+}
+#deliveri .deliveri-texto{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.deliveri-texto h2{
+  padding: 0 4rem;
+}
+#deliveri .deliveri-texto p{
+  color: var(--texto-primario-vermelho);
+  font-size: .8rem;
+  padding: .8rem;
+}
+.deliveri-wrap{
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  flex:1 250px;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+.deliveri-wrap .deliveri-box{
+  width: 250px;
+  padding: 1rem 0;
+  background-color: #fff;
+  box-shadow:  2px 2px 15px #0001;
+}
+.deliveri-wrap .deliveri-box img{
+  width: 50px;
+}
+
+.deliveri-wrap .deliveri-box div h3{
+  text-align: center;
+  padding: .8rem;
+}
+
+/*****Favoritos*****/
+#favoritos{
+  padding: 4rem 0;
+}
+#favoritos .favoritos-container {
+  display: flex;
+  align-items: center;
+  gap:1.5rem;
+}
+#favoritos .favoritos-container:last-child {
+  flex-direction: row-reverse;
+}
+#favoritos .favoritos-container .favoritos-wrap{
+  width: 50%;
+  padding: 2rem;
+}
+#favoritos .favoritos-container .favoritos-wrap .favoritos-img{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+#favoritos .favoritos-container .favoritos-wrap .favoritos-img::before{
+  content:"";
+  position: absolute;
+  width: 250px;
+  height: 70px;
+  margin: 2rem 1rem;
+  border-radius: .6rem;
+  bottom: -1.3rem;
+  background-color: #ffc642;
+  left: .5rem;
+}
+#favoritos .favoritos-container .favoritos-wrap .favoritos-img img{
+  position: absolute;
+  width: 120%;
+  margin-left: -2rem;
+  margin-top: 0rem;
+  object-fit: cover;
+  z-index: 1;
+}
+#favoritos .favoritos-container .favoritos-wrap h2{
+  position: relative;
+}
+#favoritos .favoritos-container .favoritos-wrap h2::before{
+  content: "Why Choose Us";
+  position: absolute;
+  top: -2.2rem;
+  color: #15bd9e;
+  font-size: 1rem;
+  font-weight: 300;
+}
+#favoritos .favoritos-container .favoritos-wrap p{
+  padding: 1.5rem 0;
+}
+#favoritos .favoritos-container .favoritos-wrap button{
+  background-color: var(--texto-primario-vermelho);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+}
+
+/****APP*****/
+#app {
+  background:var(--bg-vermelho-claro);
+  padding: 4rem 0;
+}
+.app-container .app-wrap{
+  display: flex;
+  align-items: center;
+  gap:3rem;
+}
+.app-img{
+ width:500px;
+}
+.app-img img{
+  max-width: 90%;
+  object-fit: cover;
+}
+.app-desc{
+  width: 600px;
+}
+.app-desc h2::before{
+  content:"Download You App";
+  position: absolute;
+  top: -2.2rem;
+  color: var(--texto-primario-vermelho);
+  font-size: 1rem;
+  font-weight: 300;
+}
+.app-desc h2{
+  position: relative;
+}
+.app-desc p{
+  padding: 1rem 0;
+}
+.app-desc .app-btn{
+  display: flex;
+  gap: 1rem;
+}
+.app-desc .app-btn button{
+  background-color: var(--texto-primario-vermelho);
+  color: #fff;
+  padding: 1rem 1rem 1rem 2.5rem;
+  border-radius: .5rem;
+  display: block;
+}
+.app-desc .btn1{
+  background-image: url("../icon/mac.png");
+  background-repeat: no-repeat;
+  background-position: 5% center;
+  background-size: 25px 25px;
+}
+.app-desc .btn2{
+  background-image: url("../icon/playstore.png");
+  background-repeat: no-repeat;
+  background-position: 5% center;
+  background-size: 25px 25px;
+}
+
+
+
+@media screen and (max-width:720px) {
+    #favoritos .favoritos-container{
+      flex-wrap: wrap;
+      flex-direction: column;
+      padding: 0rem;
+    }
+    #favoritos .favoritos-container:last-child{
+      flex-direction: column;
+      padding: 0rem;
+    }
+    .app-container .app-wrap{
+      flex-direction: column;
+    }
+    .app-desc{
+      width: 100%;
+      margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width:810px){
+
+  /*****CABEÇALHO*****/
+  
+  #cabecalho > div #e-btn{
+    display: block;
+    margin-left: auto;
+  }
+  #cabecalho > div nav,
+  #cabecalho > div form{
+    display:none;
+    position: absolute;
+    top:6rem;
+    width: 400px;
+    background-color: var(--texto-primario-vermelho);
+    z-index: 100;
+  }
+  #cabecalho > div nav .ativo{
+    color: #fff;
+  }
+  #cabecalho > div nav{
+    text-align: center;
+  }
+  #cabecalho > div nav a:hover{
+    background-color: #fff;
+    color: var(--texto-primario-vermelho);
+  }
+  #cabecalho > div nav a{
+    padding: 2rem 0;
+    color: #fff;
+    transition: all 0.75s;
+  }
+  #cabecalho > div form{
+    top: 75%;}
+  #cabecalho > div form .form-wrap .pesquisa{
+    width: 100%;
+  }
+
+  /*****CABEÇALHO-CHAMADA*****/
+  #cabecalho .chamada .chamada-texto{
+    width: 70%;
+    margin: 0 auto;
+    padding-right: 2rem;
+  }
+  #cabecalho .chamada .chamada-texto h1{
+    position: relative;
+    font-size: 3rem!important;
+  }
+  
+  #cabecalho .bg-home{
+    display: none;
+  }
+}
+
+/*****FOOTER****/
+footer{
+  padding-top: 4rem ;
+}
+footer .container{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+footer .container .rodape-logo{ 
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 30px 30px;
+  padding-left: 2.2rem;
+}
+footer .container .rodape-wrap{
+  width: 250px;
+}
+footer .container .rodape-wrap nav,
+footer .container .rodape-wrap p{
+  margin-top: 1.5rem;
+}
+footer .container .rodape-wrap nav a{ 
+    display: block;
+    margin-bottom: .8rem;
+    font-size: .9rem;
+    color: var(--texto-cor-preto);
+}
+.rodape-final{
+  padding: 1rem 4%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4rem ;
+  background-color: rgb(238, 238, 238);
+}
+.rodape-final p{
+  font-size: 1rem;
+  color: var(--texto-cor-preto);
+  font-weight: 500;
+}
+
+/******MEDIA QUERIES******/
+
+@media screen and (max-width:890px){
+
+  /*****CABEÇALHO*****/
+  #cabecalho .chamada .chamada-texto h1{
+    position: relative;
+    font-size: 2.5rem;
+  }
+  #cabecalho .chamada .chamada-texto h1 br{
+    display: none;
+  }
+  #cabecalho .chamada .chamada-texto .chamada-btn button{
+    display: block;
+    margin-bottom: .7rem;
+  }
+  #cabecalho .chamada .chamada-texto .chamada-btn > .btn1{
+    padding: .8rem 1.2rem;
+  }
+  #cabecalho .chamada .chamada-texto .chamada-btn > .btn2{
+    margin-left: 0rem;
+  }
+}
